@@ -7,14 +7,13 @@ int main()
 	int integer;
 	printf("Enter the integer for which you want calculate factorial = ");
 	scanf("%d", &integer);
-	int backup = integer;
 	if(integer < 0){
 	    while(integer < 0){
 		    printf("The integer must be > or = to 0");
 	    	scanf("%d", &integer);
 	    }
 	}
-	
+	int backup = integer;
 	while(integer>0){
 		multiply = multiply*integer;
 		integer = integer-1;
