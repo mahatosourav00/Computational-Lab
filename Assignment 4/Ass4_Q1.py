@@ -6,11 +6,13 @@ import Backward_substitution
 import Matrix_reading
 import Matrix_printing
 
+#read matrix A
 A = Matrix_reading.read("Q1_MatrixA.txt")
 #print A matrix
 print("\nA matrix is = ")
 Matrix_printing.printit(A)
 
+#read matrix B
 B = Matrix_reading.read("Q1_MatrixB.txt")
 #print B matrix
 print("\nB matrix is = ")
