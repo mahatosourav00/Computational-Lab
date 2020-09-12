@@ -32,7 +32,7 @@ for i in B:
         print(j, end='  ')
     print()
 
-#partial pivot of MAtrix A
+#partial pivot of Matrix A to remove zeros from diagonal position
 A = Partial_pivot.solve(A, B)
 
 
