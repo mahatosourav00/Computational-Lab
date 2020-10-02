@@ -10,8 +10,6 @@ def sec_deri(x, func):
     h = 0.4
     return (func(x+h) + func(x-h) - 2 * func(x))/(2*h*h)
 
-
-
 # Define bracketing function
 def bracketing(a, b, func):
     #factor assumption
@@ -58,8 +56,10 @@ def bisection(a, b, func, file):
         copy = c
         c = (a + b) / 2
         if func(a) * func(c) < 0:
+            copy = b
             b = c
         elif func(a) * func(c) > 0:
+            copy = a
             a = c
         error = abs(c - copy)
         file.write("{:^12} {:<12.3e}\n".format(i, error))
