@@ -20,5 +20,5 @@ print("Integration of the function = ", intg)
 
 ## -:The Exact Output appended below:-##
 '''
-Integration of the function =  3.1415730638082224
+Integration of the function =  3.1415729242011357
 '''
