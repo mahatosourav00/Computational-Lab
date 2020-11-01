@@ -37,6 +37,10 @@ def traphezoidal(a, b, fun, N):
     return sum
 
 def simpson(a, b, fun, N):
+    # due to odd no. issue with simpson method we take N=(Even no.)
+    if (N % 2) != 0:
+        N = N + 1
+        print("Due to odd no. issue with simpson method, we take N=(N+1) i.e N =", N)
     h = (b - a)/N
     sum = 0
     for i in range(0, N, 2):

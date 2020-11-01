@@ -42,9 +42,6 @@ print("--:Simpson Method:--")
 print("----------------------------------------------")
 N = (my_library.max_error_simpson(a, b, four_der_f_max, max_error))
 print("Calculated 'N' (Max. Error = 0.001) =", N)
-if (N % 2) != 0:
-    N = N+1
-    print("Due to odd no. issue with simpson method, we take N=(N+1) i.e N =", N)
 ans = my_library.simpson(a, b, fun, N)
 print("Integral =", ans)
 print("----------------------------------------------")

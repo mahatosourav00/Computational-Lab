@@ -15,10 +15,6 @@ ans51 = my_library.midpoint(a, b, fun, N)
 print("Itegral(Midpoint) = ", ans51)
 ans52= my_library.traphezoidal(a, b, fun, N)
 print("Itegral(Trapezoidal) = ", ans52)
-#due to odd no. issue with simpson method we take N=(Even no.)
-if (N % 2) != 0:
-    N = N+1
-    print("Due to odd no. issue with simpson method, we take N=(N+1) i.e N =", N)
 ans63 = my_library.simpson(a, b, fun, N)
 print("Itegral(Simpson) = ", ans63)
 
@@ -29,9 +25,6 @@ ans101 = my_library.midpoint(a, b, fun, N)
 print("Itegral(Midpoint) = ", ans101)
 ans102 = my_library.traphezoidal(a, b, fun, N)
 print("Itegral(Trapezoidal) = ", ans102)
-if (N % 2) != 0:
-    N = N+1
-    print("Due to odd no. issue with simpson method, we take N=(N+1) i.e N =", N)
 ans103 = my_library.simpson(a, b, fun, N)
 print("Itegral(Simpson) = ", ans103)
 
@@ -43,12 +36,8 @@ ans251 = my_library.midpoint(a, b, fun, N)
 print("Itegral(Midpoint) = ", ans251)
 ans252 = my_library.traphezoidal(a, b, fun, N)
 print("Itegral(Trapezoidal) = ", ans252)
-#due to odd no. issue with simpson method we take N=(Even no.)
-if (N % 2) != 0:
-    N = N+1
-    print("Due to odd no. issue with simpson method, we take N=(N+1) i.e N =", N)
-ans263 = my_library.simpson(a, b, fun, N)
-print("Itegral(Simpson) = ", ans263)
+ans253 = my_library.simpson(a, b, fun, N)
+print("Itegral(Simpson) = ", ans253)
 
 #print the comparison on tabulated form
 print("\n\n-:Comparison of the results of the integral methods with actual analytical result:-")
@@ -66,7 +55,7 @@ print(" {:<5}| {:<15} {:<25}| {:<12}".format(" ", "Simpson",ans103 , " "))
 print("------------------------------------------------")
 print(" {:<5}| {:<15} {:<25}| {:<12}".format(" ", "Midpoint",ans251 , " "))
 print(" {:<5}| {:<15} {:<25}| {:<12}".format("25", "Traphezoidal",ans252 , " "))
-print(" {:<5}| {:<15} {:<25}| {:<12}".format(" ", "Simpson(N=26)",ans263 , " "))
+print(" {:<5}| {:<15} {:<25}| {:<12}".format(" ", "Simpson(N=26)",ans253 , " "))
 
 print("--------------------------------------------------------------------------")
 
