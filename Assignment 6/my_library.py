@@ -1,5 +1,6 @@
 import math
 import random
+import time
 
 def max_error_midpoint(a, b, sec_der_f_max, max_error):
     err = (math.sqrt((((b-a)**3)*abs(sec_der_f_max))/(24*max_error)))
@@ -52,21 +53,29 @@ def simpson(a, b, fun, N):
         sum = sum + intg
     return sum
 
-def monte_carlo(a, b, fun, N, file):
-    #print(" {:<12}| {:<20}".format("N", "Integral (Value of pi)"))
+def monte_carlo(a, b, fun, duration, file):
     Fn = 0
     sum_fx = 0
-     #print("\nN = ", N)
-    for i in range(N):
+    #print("\nN = ", N)
+    i = 1
+    #store the time before running the loop
+    start_time = time.time()
+    #difference between current time and start time
+    runtime = time.time()-start_time
+    #run the loop for given duration of time
+    while (runtime <= duration):
+        #generate random no,
         x = random.random()
         x = a + ((b - a)*x)
         fx = fun(x)
         sum_fx = sum_fx + fx
         Fn = ((b - a)/(i+1)) * sum_fx
-        #print("Integration of the function = ", Fn)
-        #print(" {:<12}| {:<20}".format((i+1), Fn))
-        file.write("{:<15}{:<20}\n".format((i+1), Fn))
-    #print("Integration of the function = ", Fn)
+        i = i+1
+        runtime = time.time() - start_time
+        #print("runtime = ", (time.time()-start_time))
+        #when i is multiple of 10, store value of i and value of pi for that i on text file for plotting
+        if (i % 10) == 0:
+            file.write("{:<15}{:<20}\n".format((i), Fn))
     file.close()
     return Fn
 
