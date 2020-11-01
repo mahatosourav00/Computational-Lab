@@ -10,8 +10,6 @@ def fun(x):
 #limits
 a = 0
 b = 1
-#no. of random values
-N = 100000
 
 #set the time for how long the monte carlo fuction will run(more time means more no. of N)
 duration = 4        #The funtion will run for 4 seconds
