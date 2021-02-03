@@ -6,9 +6,9 @@ import my_library as ml
 def fun(x,y,z):
     return ((x**2)/(1**2))+((y**2)/(1.5**2))+((z**2)/(2**2))
 
-
+analyt_val = 12.56637
 N = 10000
-Fn, X1, X2, Y1, Y2, Z1, Z2, frac_err = ml.monte_carlo_volume(-1,1,-1.5,1.5,-2,2,fun,N)
+Fn, X1, Y1, Z1, frac_err = ml.monte_carlo_volume(-1,1,-1.5,1.5,-2,2,fun,N, analyt_val)
 
 print("\nVolume = ", Fn)
 
