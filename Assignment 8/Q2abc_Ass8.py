@@ -1,6 +1,6 @@
 
 import matplotlib.pyplot as plt
-import monte_carlo_volume as mcv
+import my_library as ml
 steps = []
 V = []
 error = []
@@ -13,7 +13,7 @@ N = 40000
 i = 0
 while i < N:
     i = i+100
-    Fn, X1, X2, Y1, Y2, Z1, Z2, frac_err  = mcv.monte_carlo_volume(-1,1,-1.5,1.5,-2,2,fun,i)
+    Fn, X1, X2, Y1, Y2, Z1, Z2, frac_err  = ml.monte_carlo_volume(-1,1,-1.5,1.5,-2,2,fun,i)
 
     steps.append(i)
     V.append(Fn)
@@ -31,9 +31,9 @@ print("\nFractional Error =", sum_err/len(error))
 
 plt.figure()
 plt.plot(steps, V)
-plt.axhline(12.57, color='r')
+plt.axhline(12.56637, color='r')
 
-plt.text(30000, 12.6, "Analytical value = 12.57", size=16,
+plt.text(30000, 12.6, "Analytical value = 12.56637", size=16,
          va="baseline", ha="left", multialignment="left")
 plt.title("Plot for Steps vs Volume of ellipsoid")
 plt.xlabel("Steps")

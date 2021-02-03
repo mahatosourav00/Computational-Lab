@@ -1,4 +1,4 @@
-import random_walk as rw
+import my_library as ml
 import matplotlib.pyplot as plt
 import math
 
@@ -11,9 +11,9 @@ steps = []
 M = 100
 N = 250
 add = 200
-print("\n\nFor Steps = 250; No. of walks = 100 : ")
+print("\n\nFor Steps = 250; No. of walks = 5 : ")
 
-X1, Y1, r_rms1, avg_x1, avg_y1, rad_dis1 = rw.random_walk(M, N)
+X1, Y1, r_rms1, avg_x1, avg_y1, rad_dis1 = ml.random_walk(M, N)
 
 print("Rrms = ", r_rms1)
 print("rootN = ",math.sqrt(N))
@@ -27,14 +27,14 @@ for i in range(5):
     axes[0, 0].set_xlabel('X')
     axes[0, 0].set_ylabel('Y')
     axes[0, 0].grid(True)
-    axes[0, 0].set_title("For steps = 250; walks = 100")
+    axes[0, 0].set_title("For steps = 250; walks = 5")
     axes[0,0].plot(X1[i],Y1[i])
 
 
 
 N = N + add
 print("\n\nFor Steps =", N,"; No. of walks =",M, ": ")
-X2, Y2, r_rms2, avg_x2, avg_y2, rad_dis2 = rw.random_walk(M, N)
+X2, Y2, r_rms2, avg_x2, avg_y2, rad_dis2 = ml.random_walk(M, N)
 
 print("Rrms = ", r_rms2)
 print("rootN = ",math.sqrt(N))
@@ -48,13 +48,13 @@ for i in range(5):
     axes[0, 1].set_xlabel('X')
     axes[0, 1].set_ylabel('Y')
     axes[0,1].grid(True)
-    axes[0,1].set_title("For steps = 450; walks = 100")
+    axes[0,1].set_title("For steps = 450; walks = 5")
     axes[0,1].plot(X2[i],Y2[i])
 
 
 N = N + add
 print("\n\nFor Steps =", N,"; No. of walks =",M, ": ")
-X3, Y3, r_rms3, avg_x3, avg_y3, rad_dis3 = rw.random_walk(M, N)
+X3, Y3, r_rms3, avg_x3, avg_y3, rad_dis3 = ml.random_walk(M, N)
 
 print("Rrms = ", r_rms3)
 print("rootN = ",math.sqrt(N))
@@ -69,13 +69,13 @@ for i in range(5):
     axes[0, 2].set_xlabel('X')
     axes[0, 2].set_ylabel('Y')
     axes[0, 2].grid(True)
-    axes[0, 2].set_title("For steps = 650; walks = 100")
+    axes[0, 2].set_title("For steps = 650; walks = 5")
     axes[0,2].plot(X3[i],Y3[i])
 
 
 N = N + add
 print("\n\nFor Steps =", N,"; No. of walks =",M, ": ")
-X4, Y4, r_rms4, avg_x4, avg_y4, rad_dis4 = rw.random_walk(M, N)
+X4, Y4, r_rms4, avg_x4, avg_y4, rad_dis4 = ml.random_walk(M, N)
 
 print("Rrms = ", r_rms4)
 print("rootN = ",math.sqrt(N))
@@ -90,13 +90,13 @@ for i in range(5):
     axes[1, 0].set_xlabel('X')
     axes[1, 0].set_ylabel('Y')
     axes[1, 0].grid(True)
-    axes[1, 0].set_title("For steps = 850; walks = 100")
+    axes[1, 0].set_title("For steps = 850; walks = 5")
     axes[1, 0].plot(X4[i],Y4[i])
 
 N = N + add
 print("\n\nFor Steps =", N,"; No. of walks =",M, ": ")
 
-X5, Y5, r_rms5, avg_x5, avg_y5, rad_dis5 = rw.random_walk(M, N)
+X5, Y5, r_rms5, avg_x5, avg_y5, rad_dis5 = ml.random_walk(M, N)
 
 print("Rrms = ", r_rms5)
 print("rootN = ",math.sqrt(N))
@@ -111,7 +111,7 @@ for i in range(5):
     axes[1, 1].set_xlabel('X')
     axes[1, 1].set_ylabel('Y')
     axes[1, 1].grid(True)
-    axes[1, 1].set_title("For steps = 1050; walks = 100")
+    axes[1, 1].set_title("For steps = 1050; walks = 5")
     axes[1,1].plot(X5[i],Y5[i])
 #figure.tight_layout()
 plt.figure()

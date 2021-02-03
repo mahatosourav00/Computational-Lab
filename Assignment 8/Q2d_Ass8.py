@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
-import monte_carlo_volume as mcv
+import my_library as ml
 
 
 def fun(x,y,z):
@@ -8,7 +8,7 @@ def fun(x,y,z):
 
 
 N = 10000
-Fn, X1, X2, Y1, Y2, Z1, Z2, frac_err = mcv.monte_carlo_volume(-1,1,-1.5,1.5,-2,2,fun,N)
+Fn, X1, X2, Y1, Y2, Z1, Z2, frac_err = ml.monte_carlo_volume(-1,1,-1.5,1.5,-2,2,fun,N)
 
 print("\nVolume = ", Fn)
 
